@@ -1,0 +1,11 @@
+<h1>Lista de usuarios</h1>
+
+{{#each user as |val|}}
+<ul>
+  <li>{{ val.name}} {{val.lastname}} {{val.phone}} {{val.email}}
+    <a href="/delete">Eliminar</a>
+  </li>
+</ul>
+{{/each}}
+
+<a href="/user/form">Volver al form</a>
