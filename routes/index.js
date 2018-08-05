@@ -22,31 +22,6 @@ router.get('/user/form', function (req, res, next) {
 // User list
 router.get('/user/list', function (req, res, next) {
 
-  console.log('GET ->', req.query);
-  /*const list = document.querySelector('ul')
-
-  const searchBar = document
-    .forms['searchUsers']
-    .querySelector('input');
-  searchBar.addEventListener('keyup', function (e) {
-    const term = e
-      .target
-      .value
-      .toLowerCase();
-    const usersList = list.getElementsByTagName('li');
-    Array
-      .from(users)
-      .forEach(function (u) {
-        const title = u.firstElementChild.textContent;
-        console.log(title);
-        if (title.toLowerCase().indexOf(term) != -1) {
-          u.style.display = 'block';
-        } else {
-          u.style.display = 'none'
-        }
-      })
-  })*/
-
   res.render('userList', {user: users})
 
 })
