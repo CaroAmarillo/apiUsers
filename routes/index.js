@@ -25,7 +25,6 @@ router.get('/user/list', function (req, res, next) {
 
 // Create user and list
 router.post('/user', urlencodedParser, function (req, res, next) {
-  let submitErrors;
   const name = req.body.name;
   const lastname = req.body.lastname;
   const phone = req.body.phone;
@@ -39,24 +38,20 @@ router.post('/user', urlencodedParser, function (req, res, next) {
   }
 
   //Validation
-  const regex = new RegExp(/^([a-z\d\._ ]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/);
+  const regexPhone = new RegExp(/^[0-9]{10}$/)
+  const regexEmail = new RegExp(/^([a-z\d\._ ]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/);
 
-  if (name.length <= 30 && lastname.length <= 30 && regex.test(email)) {
+  if (name.length <= 30 && lastname.length <= 30 && regexEmail.test(email) && regexPhone.test(phone)) {
     users.push(userData);
-    //submitErrors = true
     console.log(users);
   } else {
-    //submitErrors = false
-    console.log('username invalid');
+    console.log('user invalid');
   }
 
   //users.push(userData);
   console.log('POST ->', req.body);
   console.log('POST ->', users);
-  res.render('userForm', {
-    user: users,
-    errors: submitErrors
-  });
+  res.render('userForm', {user: users});
 })
 
 // Go to ping and render Pong =P

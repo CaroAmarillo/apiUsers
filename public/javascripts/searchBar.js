@@ -1,15 +1,6 @@
 window.onload = function () {
   const list = document.querySelector('#userList ul');
 
-  list.addEventListener('click', (e) => {
-    if (e.target.className == 'delete') {
-      const li = e.target.parentElement;
-      li
-        .parentNode
-        .removeChild(li);
-    }
-  });
-
   // userSearch by name
   const searchBar = document
     .forms['searchUser']
@@ -30,5 +21,15 @@ window.onload = function () {
           user.style.display = 'none';
         }
       });
+  });
+
+  // Delete user from list
+  list.addEventListener('click', (e) => {
+    if (e.target.className == 'delete') {
+      const li = e.target.parentElement;
+      li
+        .parentNode
+        .removeChild(li);
+    }
   });
 }
