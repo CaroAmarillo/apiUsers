@@ -51,7 +51,8 @@ router.post('/user', urlencodedParser, function (req, res, next) {
   //users.push(userData);
   console.log('POST ->', req.body);
   console.log('POST ->', users);
-  res.render('userForm', {user: users});
+  //res.render('userForm', {user: users});
+  res.redirect('/user/list')
 })
 
 // Go to ping and render Pong =P
