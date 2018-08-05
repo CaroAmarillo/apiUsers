@@ -1,22 +1,24 @@
-<h1>Ingresar usuario</h1>
-<div class="form">
-  <fieldset>
-    <form action="/user" method="post">
-      <label for="name">Nombre</label>
-      <input type="text" name="name" maxlength="30">
-      <label for="lastname">Apellido</label>
-      <input type="text" name="lastname" maxlength="30">
-      <label for="phone">Telefono</label>
-      <input type="phone" name="phone" pattern="[0-9]{10}">
-      <label for="mail">E-mail</label>
-      <input type="email" name="email">
-      <button type="submit">Enviar</button>
-    </form>
-  </fieldset>
+<h1>Crear usuario</h1>
+<div class="container">
+  <div class="form">
+    <fieldset>
+      <form action="/user" method="post">
+        <label for="name">Nombre</label>
+        <input type="text" name="name" maxlength="30">
+        <label for="lastname">Apellido</label>
+        <input type="text" name="lastname" maxlength="30">
+        <label for="phone">Telefono</label>
+        <input type="phone" name="phone" pattern="[0-9]{10}">
+        <label for="mail">E-mail</label>
+        <input type="email" name="email">
+        <button type="submit">Enviar</button>
+      </form>
+    </fieldset>
+  </div>
 </div>
 
 <!--{{#if errors}}
 <h1 style="color:red;">Invalid name</h1> {{else}} Success!{{/if}}-->
 
-<a href="/user/list">Ver Listado</a>
-<a href="/">Volver Atras</a>
+<a class="link" href="/user/list">Ver Listado</a>
+<a class="link" href="/">Volver Atras</a>

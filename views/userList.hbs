@@ -10,10 +10,14 @@
   <ul>
     {{#each user as |val key|}}
     <li>
-      <span class="name">{{val.name}}</span>
-      <span>{{ val.lastname}}</span>
-      <span>{{ val.phone}}</span>
-      <span>{{ val.email}}</span>
+      <span class="name">
+        <span class="tag"> Nombre:</span> {{val.name}} </span>
+      <span>
+        <span class="tag"> Apellido:</span> {{ val.lastname}} </span>
+      <span>
+        <span class="tag"> Telefono:</span> {{ val.phone}} </span>
+      <span>
+        <span class="tag"> Email:</span> {{ val.email}} </span>
 
       <button class="delete">Eliminar</button>
 
@@ -22,6 +26,6 @@
   </ul>
 </div>
 
-<a href="/user/form">Volver al form</a>
+<a class="link" href="/user/form">Volver al form</a>
 
 <script src="/javascripts/searchBar.js"></script>

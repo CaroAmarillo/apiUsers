@@ -7,19 +7,19 @@ let users = [];
 
 // Home
 router.get('/', function (req, res, next) {
-  res.render('index', {title: 'Express'});
+  res.render('index', {title: 'Home'});
 });
 
 // Create user
 router.get('/user/form', function (req, res, next) {
-  res.render('userForm', {title: 'UserForm'})
+  res.render('userForm', {title: 'Create user'})
 })
 
 // User list
 router.get('/user/list', function (req, res, next) {
   res.render('userList', {
     user: users,
-    title: 'UserList'
+    title: 'List'
   })
 })
 
