@@ -8,15 +8,14 @@
 <div id="userList">
   <h2 class="title">Users</h2>
   <ul>
-    {{#each user as |val|}}
+    {{#each user as |val key|}}
     <li>
-      <span class="name">{{ val.name}}</span>
-      <span class="name">{{ val.lastname}}</span>
-      <span class="name">{{ val.phone}}</span>
-      <span class="name">{{ val.email}}</span>
-      <span class="delete">
-        <a href="/delete">Eliminar</a>
-      </span>
+      <span class="name">{{val.name}}</span>
+      <span>{{ val.lastname}}</span>
+      <span>{{ val.phone}}</span>
+      <span>{{ val.email}}</span>
+
+      <button class="delete">Eliminar</button>
 
     </li>
     {{/each}}
@@ -26,3 +25,5 @@
 
 
 <a href="/user/form">Volver al form</a>
+
+<script src="/javascripts/searchBar.js"></script>
