@@ -1,6 +1,6 @@
 <h1>Ingresar usuario</h1>
 
-<form action="/user/create" method="post">
+<form action="/user" method="post">
   <label for="name">Nombre</label>
   <input type="text" name="name">
   <label for="lastname">Apellido</label>
@@ -11,5 +11,10 @@
   <input type="text" name="email">
   <button type="submit">Enviar</button>
 </form>
+
+<!--{{#if errors}}
+<h1 style="color:red;">Invalid name</h1> {{else}} Success!{{/if}}-->
+
+
 <a href="/user/list">Ver Listado</a>
 <a href="/">Volver Atras</a>
