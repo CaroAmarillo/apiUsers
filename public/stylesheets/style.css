@@ -1,11 +1,12 @@
 body {
   padding: 50px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: #333;
   background-color: #eee;
 }
 
+/* style to make links look like buttons*/
 .link {
   text-decoration: none;
   color: #eee;
@@ -13,6 +14,8 @@ body {
   padding: 10px;
   border-radius: 5px;
 }
+
+/* forms styles */
 fieldset {
   border: none;
   margin-bottom: 2%;
@@ -42,10 +45,17 @@ button[type='submit'] {
   width: 15%;
   font-size: 20px;
 }
+
+/* styles for userList */
 ul {
   list-style-type: none;
   margin-bottom: 10%;
 }
+
+ul > li {
+  margin-bottom: 10px;
+}
+
 .tag {
   font-weight: bold;
   margin-left: 10px;

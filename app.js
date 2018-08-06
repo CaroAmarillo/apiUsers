@@ -1,14 +1,13 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const hbs = require("express-handlebars");
 
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var hbs = require("express-handlebars");
+const index = require('./routes/index');
 
-var index = require('./routes/index');
-
-var app = express();
+const app = express();
 
 // view engine setup extname -> extension of the files
 app.engine('hbs', hbs({
@@ -16,6 +15,7 @@ app.engine('hbs', hbs({
   defaultLayout: 'layout',
   layoutsDir: __dirname + '/views/layouts/'
 }));
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 

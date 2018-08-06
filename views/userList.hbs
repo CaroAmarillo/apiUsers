@@ -1,14 +1,17 @@
+{{!-- UserList --}}
 <h1>Lista de usuarios</h1>
 
+{{!-- searchBar -> search user by name --}}
 <form id="searchUser">
-  <input type="text" placeholder="Search user by name..." />
+  <input type="text" placeholder="Buscar por nombre de usuario..." />
 </form>
 <br/>
 <br/>
 <div id="userList">
   <h2 class="title">Users</h2>
+  {{!-- Iteration over users --}}
   <ul>
-    {{#each user as |val key|}}
+    {{#each user as |val|}}
     <li>
       <span class="name">
         <span class="tag"> Nombre:</span> {{val.name}} </span>
@@ -26,4 +29,5 @@
 
 <a class="link" href="/user/form">Volver al form</a>
 
+{{!-- searchBar function /public/javascripts/searchBar.js --}}
 <script src="/javascripts/searchBar.js"></script>

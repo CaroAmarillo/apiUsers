@@ -1,7 +1,8 @@
 window.onload = function () {
+  /* select ul */
   const list = document.querySelector('#userList ul');
 
-  // userSearch by name
+  /* userSearch by name */
   const searchBar = document
     .forms['searchUser']
     .querySelector('input');

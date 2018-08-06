@@ -3,27 +3,21 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 
 const urlencodedParser = bodyParser.urlencoded({extended: false})
+
+// UserList
 let users = [];
 
-// Home
+// Home route
 router.get('/', function (req, res, next) {
   res.render('index', {title: 'Home'});
 });
 
-// Create user
+// Create user route
 router.get('/user/form', function (req, res, next) {
   res.render('userForm', {title: 'Create user'})
 })
 
-// User list
-router.get('/user/list', function (req, res, next) {
-  res.render('userList', {
-    user: users,
-    title: 'List'
-  })
-})
-
-// Create user and list
+// Create user and list route and redirect
 router.post('/user', urlencodedParser, function (req, res, next) {
   const name = req.body.name;
   const lastname = req.body.lastname;
@@ -48,11 +42,17 @@ router.post('/user', urlencodedParser, function (req, res, next) {
     console.log('user invalid');
   }
 
-  //users.push(userData);
   console.log('POST ->', req.body);
   console.log('POST ->', users);
-  //res.render('userForm', {user: users});
   res.redirect('/user/list')
+})
+
+// User list route
+router.get('/user/list', function (req, res, next) {
+  res.render('userList', {
+    user: users,
+    title: 'List'
+  })
 })
 
 // Go to ping and render Pong =P
