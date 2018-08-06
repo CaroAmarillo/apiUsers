@@ -2,13 +2,16 @@
 
 > API hecha con express-generator.
 
-## Pasos
+### Requisitos
+
+* [Node](https://nodejs.org/es/)
+
 
 ```bash
 $ npm install
 $ npm start
 ```
 
-**[localhost:3000](localhost:3000)**
+Ir a [http://localhost:3000/](http://localhost:3000/)
 
 **📚 Carolina Amarillo [@carobamarillo](https://twitter.com/carobamarillo)**
